@@ -33,8 +33,12 @@ class PageController extends Controller
      */
     public function blog()
     {
-        Post::all();
+        // Post::all();
         //dd($posts);
-        return view('blog');
+        // return view('blog');
+
+        $posts = Post::all();
+        // dd(Post::all());
+        return view('blog', compact('posts'));
     }
 }
